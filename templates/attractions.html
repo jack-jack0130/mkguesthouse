@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+{% block title %}
+Hotel Homepage
+{% endblock %}
+
+{% block intro %}
+
+
+    <h2>客房照片</h2>
+
+  <div class="gallery-container">
+  <div class="image">
+    <div class="image-wrapper">
+      <img src="{{ url_for('static', filename='attraction16.jpg') }}" alt="attraction img" >
+    </div>
+  </div>
+  <div class="description">
+    <p>這個長達一公里的露天市集位於通菜街，匯集逾百個攤子販售價格相宜的服裝、飾物、化妝品及家居用品。但可別被「女人街」這個名字誤導了！這裡亦販售男裝、電子用品以至玩具，是一眾精明旅客選購廉價服飾與紀念品的熱點。「女人街」大多數攤販於中午左右至晚上11時半營業。從城景國際步行約5分鐘或乘搭港鐵前往港鐵旺角站，約2分鐘。</p>
+  </div>
+
+  <div class="image">
+    <div class="image-wrapper">
+      <img src="{{ url_for('static', filename='attraction15.jpg') }}" alt="attraction img" >
+    </div>
+  </div>
+  <div class="description">
+    <p>位於旺角心臟地帶的朗豪坊商場，樓高15層，是區內的潮流熱點。商場近200間店舖薈萃國際及本地潮流品牌，包括時裝、美容、精品玩具、生活品味、特色餐飲食肆和戲院等，讓你享受一站式的購物消閒樂趣，盡情血拼！</p>
+    <a href="http://www.langhamplace.com.hk/tc/">http://www.langhamplace.com.hk/tc/</a>
+  </div>
+
+  <div class="image">
+    <div class="image-wrapper">
+      <img src="photo3.jpg" alt="Photo 3">
+    </div>
+  </div>
+  <div class="description">Description 3</div>
+
+  <div class="image">
+    <div class="image-wrapper">
+      <img src="photo4.jpg" alt="Photo 4">
+    </div>
+  </div>
+  <div class="description">Description 4</div>
+  <!-- Add more images and descriptions here as needed -->
+</div>
+
+<style>
+  .gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.image {
+  grid-column: 1;
+}
+
+.description {
+  grid-column: 2;
+}
+
+/* Limit the size of the .image-wrapper inside the .image div */
+.image .image-wrapper {
+  max-width: calc(100% - 10px); /* 1/3 of the container width minus the grid gap */
+  width: 100%; /* Ensures the image wrapper takes the full width available in the first column */
+
+}
+
+/* Limit the size of the img inside the .image-wrapper */
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
