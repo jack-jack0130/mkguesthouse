@@ -39,7 +39,6 @@ PyScreeze==0.1.29
 pytube==15.0.0
 pytweening==1.0.7
 pytz==2023.3
-pywin32==306
 pywin32-ctypes==0.2.2
 requests==2.31.0
 six==1.16.0
