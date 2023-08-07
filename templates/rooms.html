@@ -5,7 +5,70 @@ Hotel Homepage
 
 {% block intro %}
 
-    <h2>客房照片</h2>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+
+
+<h2>客房照片</h2>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="{{ url_for('static', filename='room04.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="{{ url_for('static', filename='room05.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container" >
+  <img src="{{ url_for('static', filename='room06.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="{{ url_for('static', filename='room07.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container" >
+  <img src="{{ url_for('static', filename='room08.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="{{ url_for('static', filename='room09.jpg') }}" alt="room img" style="width:100%">
+  </div>
+  <div class="img-container" >
+  <img src="{{ url_for('static', filename='room10.jpg') }}" alt="room img" style="width:100%">
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+{% block photos %}
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
+<h2></h2>
 
       <div class="gallery">
 
@@ -31,13 +94,3 @@ Hotel Homepage
     }
 
 </style>
-
-
-
-{% endblock %}
-
-{% block content %}
-
-
-{% endblock %}
-

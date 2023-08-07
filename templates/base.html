@@ -21,19 +21,20 @@
       <li><a href="{{ url_for('book')}}">訂房及查詢</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <div class="hotel-intro" style="background-size: cover;background-repeat: no-repeat; background-image: url('{{ url_for('static', filename='mongkok09.jpg') }}');">
+  <div class="container" style="background-size: cover;background-repeat: no-repeat; background-image: url('{{ url_for('static', filename='mongkok09.jpg') }}');">
+    <div class="hotel-intro" >
         {% block intro %}
         {% endblock %}
 
     </div>
+    {% block photos %}
     <div class="hotel-photos">
       <div class="hotel-photo"> <img src="{{ url_for('static', filename='mongkok02.jpg') }}" alt="Image"></div>
       <div class="hotel-photo"> <img src="{{ url_for('static', filename='mongkok03.jpg') }}" alt="Image"></div>
       <div class="hotel-photo"> <img src="{{ url_for('static', filename='mongkok04.jpg') }}" alt="Image"></div>
-
-
     </div>
+{% endblock %}
+
   </div>
   <div class="middle">
         {% block content %}
@@ -143,6 +144,7 @@ nav a:hover {
 .hotel-photo {
   min-height: 200px;
   background-color: #f0f0f0;
+  
 }
 .hotel-photos img {
   /* Set the image size to fill its container */
@@ -151,7 +153,7 @@ nav a:hover {
   /* Prevent the image from stretching and maintain aspect ratio */
   object-fit: cover;
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 1080px) {
   .container {
     flex-direction: column;
   }
@@ -161,8 +163,8 @@ nav a:hover {
     background-size: cover;
   }
 
-  .hotel-photos {
-    flex: 1;
+  div.hotel-photos {
+    display: none;
   }
 }
 
