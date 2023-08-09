@@ -21,6 +21,21 @@ Hotel Homepage
   clear: both;
   display: table;
 }
+
+@media only screen and (max-width: 768px) {
+
+.img-container {
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}
 </style>
 
 
@@ -68,29 +83,3 @@ Hotel Homepage
 
 {% endblock %}
 
-<h2></h2>
-
-      <div class="gallery">
-
-
-
-            <img src="{{ url_for('static', filename='room04.jpg') }}" alt="room img" style=" max-width: 350px; max-height: 250px; margin: 20px;">
-            <img src="{{ url_for('static', filename='room05.jpg') }}" alt="room img" style=" max-width: 350px; max-height: 250px; margin: 20px;">
-            <img src="{{ url_for('static', filename='room06.jpg') }}" alt="room img" style="max-width: 350px; max-height: 250px; margin: 20px;">
-            <img src="{{ url_for('static', filename='room07.jpg') }}" alt="room img" style="max-width: 350px; max-height: 250px; margin: 20px;">
-            <img src="{{ url_for('static', filename='room08.jpg') }}" alt="room img" style="max-width: 350px; max-height: 250px; margin: 20px;">
-          <img src="{{ url_for('static', filename='room09.jpg') }}" alt="room img" style="max-width: 350px; max-height: 250px; margin: 20px;">
-          <img src="{{ url_for('static', filename='room10.jpg') }}" alt="room img" style="max-width: 350px; max-height: 250px; margin: 20px;">
-
-      </div>
-
-
-
-<style>
-    .garllery{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
-    }
-
-</style>
