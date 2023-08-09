@@ -5,14 +5,31 @@ Hotel Homepage
 
 {% block intro %}
 
-<div style="display: flex">
+<style>
+
+      .container {
+       display: flex;
+      }
+
+
+      @media only screen and (max-width: 768px) {
+            flex-direction: column;
+
+      }
+
+
+</style>
+
+
+
+<div class="container" >
       <div style="flex: 1;">
-<img src="{{ url_for('static', filename='wechat_QR02.jpg') }}" alt="qr code" style="max-width: 400px; max-height: 550px; margin-right:30px">
+<img src="{{ url_for('static', filename='wechat_QR02.jpg') }}" alt="qr code" style="width:90%; margin-right:30px">
       </div>
 
       <div style="flex: 1;">
             <h2>預訂及查詢</h2>
-            <p>歡迎掃左側二維碼預訂和查詢</p>
+            <p>歡迎掃二維碼預訂和查詢</p>
             <p>我們都是您的首選。</p>
             <p>我方蕾盡物樂趣。</p>
             <p>務中心，提供打印、傳真等服務，滿求。</p>
